@@ -1,4 +1,4 @@
-import '../../../../core/http_client.dart';
+import '../../../../core/utils/http_client.dart';
 import '../model/ProductEntity.dart';
 import '../source/product_data_source.dart';
 

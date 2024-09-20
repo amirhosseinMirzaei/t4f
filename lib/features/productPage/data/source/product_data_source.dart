@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 
-import '../../../../core/response_validator.dart';
+import '../../../../core/utils/response_validator.dart';
 import '../model/ProductEntity.dart';
 
 abstract class IProductDataSource {
