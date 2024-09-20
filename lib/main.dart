@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.black,
         ),
       ),
-      themeMode: ThemeMode.dark, // Forces dark mode
+      themeMode: ThemeMode.dark,
       home: ProductScreen(),
     );
   }

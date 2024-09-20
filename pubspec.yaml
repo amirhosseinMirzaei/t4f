@@ -39,6 +39,7 @@ dependencies:
   carousel_slider: ^4.0.0
   lottie: ^3.1.0
   flutter_svg: ^2.0.10+1
+  shared_preferences: ^2.0.0
   awesome_dialog: any
 dev_dependencies:
   flutter_test:

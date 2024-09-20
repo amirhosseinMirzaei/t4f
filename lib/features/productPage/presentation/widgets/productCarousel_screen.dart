@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:test_t4f/core/widgets/loading_screen.dart';
 import 'package:test_t4f/features/productPage/presentation/widgets/productDetail_screen.dart';
 
@@ -40,6 +41,8 @@ class ProductCard extends StatelessWidget {
     final textColor = theme.textTheme.bodyLarge?.color;
     return InkWell(
       onTap: () async {
+        SharedPreferences prefs = await SharedPreferences.getInstance();
+        await prefs.setString('lastClickedProduct', product.id!);
         Navigator.push(context, MaterialPageRoute(builder: (context) {
           return ProductDetail(product);
         }));

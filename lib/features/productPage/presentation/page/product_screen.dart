@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:test_t4f/core/widgets/loading_screen.dart';
 
 import '../../data/model/ProductEntity.dart';
@@ -72,7 +73,22 @@ class _ProductScreenState extends State<ProductScreen> {
 
   _getProductList() async {
     products = await productRepository.getAll();
-    print(products);
+
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? lastClickedProductId = prefs.getString('lastClickedProduct');
+
+    // If the last clicked product ID exists, reorder the products
+    if (lastClickedProductId != null) {
+      Product? lastClickedProduct = products.firstWhere(
+        (product) => product.id == lastClickedProductId,
+      );
+
+      if (lastClickedProduct != null) {
+        products.remove(lastClickedProduct);
+        products.insert(0, lastClickedProduct);
+      }
+    }
+
     setState(() {});
   }
 }
