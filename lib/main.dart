@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
       title: 'Your App',
       theme: ThemeData.dark().copyWith(
         primaryColor: Colors.black,
-        scaffoldBackgroundColor: Colors.black45,
-        cardColor: Colors.grey[900],
+        scaffoldBackgroundColor: Color(0xff242C3B),
+        cardColor: Color(0xff363E51),
         textTheme: TextTheme(
           bodyLarge: TextStyle(color: Colors.white),
           bodyMedium: TextStyle(color: Colors.white70),

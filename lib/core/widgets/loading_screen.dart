@@ -25,6 +25,7 @@ class _LoadingWidgetState extends State<LoadingWidget> with TickerProviderStateM
   Widget build(BuildContext context) {
     try {
       return Center(
+
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -41,9 +42,10 @@ class _LoadingWidgetState extends State<LoadingWidget> with TickerProviderStateM
             textDirection: TextDirection.rtl,
             child: Center(
               child: Text(
-                style: TextStyle(decoration: TextDecoration.none, color: Colors.white, fontSize: 25),
+                style: TextStyle(decoration: TextDecoration.none, color: Colors.white, fontSize: 23),
                 "میدونستی وقتی صبر میکنی جذاب تر میشی!",
                 textDirection: TextDirection.rtl,
+
               ),
             ),
           )
