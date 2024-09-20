@@ -7,7 +7,7 @@ final productRepository = ProductRepository(ProductRemoteDataSource(httpClient))
 abstract class IProductRepository {
   Future<List<Product>> getAll();
 
-  Future<List<Product>> search(String searchTerm);
+
 }
 
 class ProductRepository implements IProductRepository {
@@ -18,6 +18,5 @@ class ProductRepository implements IProductRepository {
   @override
   Future<List<Product>> getAll() => dataSource.getAll();
 
-  @override
-  Future<List<Product>> search(String searchTerm) => dataSource.search(searchTerm);
+
 }
