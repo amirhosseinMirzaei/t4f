@@ -74,10 +74,11 @@ class _ProductScreenState extends State<ProductScreen> {
   _getProductList() async {
     products = await productRepository.getAll();
 
+    products.shuffle();
+
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? lastClickedProductId = prefs.getString('lastClickedProduct');
 
-    // If the last clicked product ID exists, reorder the products
     if (lastClickedProductId != null) {
       Product? lastClickedProduct = products.firstWhere(
         (product) => product.id == lastClickedProductId,

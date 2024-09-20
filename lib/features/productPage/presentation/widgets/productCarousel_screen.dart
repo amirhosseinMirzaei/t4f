@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:test_t4f/core/widgets/loading_screen.dart';
+
 import 'package:test_t4f/features/productPage/presentation/widgets/productDetail_screen.dart';
 
 import '../../data/model/ProductEntity.dart';
