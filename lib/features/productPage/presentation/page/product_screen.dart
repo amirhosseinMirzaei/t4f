@@ -66,7 +66,7 @@ class _ProductScreenState extends State<ProductScreen> {
                   ) // Show loader until products are fetched
                 : ProductCarousel(products: products),
           ],
-        ), // Use the refactored ProductCarousel widget
+        ),
       ),
     );
   }

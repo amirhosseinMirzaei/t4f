@@ -58,11 +58,11 @@ class ProductCard extends StatelessWidget {
             children: [
               product.image != null
                   ? Stack(
-                      clipBehavior: Clip.none, // Allow children to overflow outside the Stack
+                      clipBehavior: Clip.none,
                       children: [
-                        // Only Clip the image, not the entire Stack
+
                         ClipRRect(
-                          borderRadius: BorderRadius.circular(20), // Apply radius to the image
+                          borderRadius: BorderRadius.circular(20),
                           child: Image.network(
                             product.image!,
                             fit: BoxFit.cover,
@@ -76,7 +76,7 @@ class ProductCard extends StatelessWidget {
                             width: 100,
                             height: 30,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15), // Keep the radius for the container
+                              borderRadius: BorderRadius.circular(15),
                               gradient: LinearGradient(colors: [
                                 Color(0xff4E4AF2),
                                 Color(0xff34C8E8),
@@ -86,7 +86,7 @@ class ProductCard extends StatelessWidget {
                                   color: Colors.black.withOpacity(0.2),
                                   spreadRadius: 2,
                                   blurRadius: 5,
-                                  offset: Offset(0, 2), // Add shadow for better effect
+                                  offset: Offset(0, 2)
                                 ),
                               ],
                             ),
